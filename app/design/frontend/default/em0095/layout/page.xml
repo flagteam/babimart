@@ -79,6 +79,7 @@ Default layout, loads most of the pages
                 <action method="addCss"><stylesheet>css/em_cloudzoom.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/em_variation.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/social.css</stylesheet></action>
+                <action method="addCss"><stylesheet>css/jquery-ui.css</stylesheet></action>
                 
                 
                 <action method="addItem"><type>js</type><name>lib/ds-sleight.js</name><params/><if>lt IE 7</if></action>
@@ -106,7 +107,7 @@ Default layout, loads most of the pages
 
             <block type="core/template" name="em_area_language-currency" as="em_area_language-currency" translate="label" template="page/html/language_currency.phtml"><label>Language - Currency</label>              
                 <block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml" />
-            </block>  
+            </block>
 
             <block type="core/text_list" name="em_area_search" as="em_area_search" translate="label">
                 <label>Search</label>
@@ -209,6 +210,12 @@ Default layout, loads most of the pages
 			<block type="core/text_list" name="em_area48" translate="label"><label>EM Area 48</label></block>
 			<block type="core/text_list" name="em_area49" translate="label"><label>EM Area 49</label></block>
         </block>
+        <reference name="header">
+            <block type="page/switch" name="header_store">
+                <action method="setTemplate"><template>page/switch/storeview.phtml</template></action>
+                <!--<block type="page/switch" name="store_view" as="store-view" template="page/switch/storeview.phtml" />-->
+            </block>
+        </reference>
 
         <block type="core/profiler" output="toHtml" name="core_profiler"/>
     </default>
