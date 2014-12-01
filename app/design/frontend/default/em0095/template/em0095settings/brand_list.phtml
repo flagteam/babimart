@@ -1,5 +1,7 @@
 <?php $manufacturers = $this->getBrandList();
 
+$attrCode = Mage::getStoreConfig('em0095/brandproduct/attributecode');
+
 function sort_arr_of_obj($array, $sortby, $direction='asc') {
     
     $sortedArr = array();
@@ -96,9 +98,15 @@ $heightColumn = ceil($count / $columnCount);
 		<?php $temp['number'] = 1;?>
 		<?php endif;?>
 		<?php if(in_array($arr[$k][$i]['label'][0],$arr_number)):?>
-			<li class="level<?php echo $this->getData('level_class')?> ">
-				<a href="<?php echo $this->getBaseUrl()?>catalogsearch/advanced/result/?<?php echo Mage::getStoreConfig('em0095/brandproduct/attributecode');?>[]=<?php echo $arr[$k][$i]['value']; ?>"><?php echo $arr[$k][$i]['label']; ?></a>
-			</li>
+            <?php if($attrCode == 'manufacturer'): ?>
+                <li class="level<?php echo $this->getData('level_class')?> ">
+                    <a href="<?php echo $this->getBaseUrl()?>brands/brand/view/id/<?php echo $arr[$k][$i]['value']; ?>"><?php echo $arr[$k][$i]['label']; ?></a>
+                </li>
+            <?php else: ?>
+                <li class="level<?php echo $this->getData('level_class')?> ">
+                    <a href="<?php echo $this->getBaseUrl()?>catalogsearch/advanced/result/?<?php echo Mage::getStoreConfig('em0095/brandproduct/attributecode');?>[]=<?php echo $arr[$k][$i]['value']; ?>"><?php echo $arr[$k][$i]['label']; ?></a>
+                </li>
+            <?php endif; ?>
 		<?php endif;?>
 
 		<!--Kiem tra Ky tu dau la chu cai-->
@@ -121,9 +129,15 @@ $heightColumn = ceil($count / $columnCount);
 			<?php endif;?>
 		<?php }?>
 
-		<li class="level<?php echo $this->getData('level_class')?> ">
-			<a href="<?php echo $this->getBaseUrl()?>catalogsearch/advanced/result/?<?php echo Mage::getStoreConfig('em0095/brandproduct/attributecode');?>[]=<?php echo $arr[$k][$i]['value']; ?>"><?php echo $arr[$k][$i]['label']; ?></a>
-		</li>
+        <?php if($attrCode == 'manufacturer'): ?>
+            <li class="level<?php echo $this->getData('level_class')?> ">
+                <a href="<?php echo $this->getBaseUrl()?>brands/brand/view/id/<?php echo $arr[$k][$i]['value']; ?>"><?php echo $arr[$k][$i]['label']; ?></a>
+            </li>
+        <?php else: ?>
+            <li class="level<?php echo $this->getData('level_class')?> ">
+                <a href="<?php echo $this->getBaseUrl()?>catalogsearch/advanced/result/?<?php echo Mage::getStoreConfig('em0095/brandproduct/attributecode');?>[]=<?php echo $arr[$k][$i]['value']; ?>"><?php echo $arr[$k][$i]['label']; ?></a>
+            </li>
+        <?php endif; ?>
 
 	<?php endfor;?>
 </ul>
