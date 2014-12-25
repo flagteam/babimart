@@ -1,13 +1,30 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
-    <catalog_category_layered>
+    <catalog_category_default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/em_layerednavigation.css</stylesheet></action>
+            <action method="addJs"><script>em_layerednavigation/jquery.js</script></action>
+            <action method="addJs"><script>em_layerednavigation/jquery.address.js</script></action>
+            <action method="addJs"><script>em_layerednavigation/layer.js</script></action>
+            <action method="addJs"><script>em_layerednavigation/treeview.js</script></action>
+            <action method="addJs"><script>em_layerednavigation/slider.js</script></action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="layerednavigation/loading" name="layernav.loading" template="em_layerednavigation/loading.phtml"/>
+        </reference>
+        <reference name="left">
+            <remove name="catalog.leftnav"/>
+            <block type="layerednavigation/catalog_layer" name="em.catalog.leftnav" template="em_layerednavigation/view.phtml" before="-"/>
+        </reference>
+    </catalog_category_default>
+	<catalog_category_layered>
 		<reference name="head">
             <action method="addCss"><stylesheet>css/em_layerednavigation.css</stylesheet></action>
-			<action method="addItem"><type>skin_js</type><name>em_layerednavigation/jquery.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>em_layerednavigation/jquery.address.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>em_layerednavigation/layer.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>em_layerednavigation/treeview.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>em_layerednavigation/slider.js</name></action>
+			<action method="addJs"><script>em_layerednavigation/jquery.js</script></action>
+			<action method="addJs"><script>em_layerednavigation/jquery.address.js</script></action>
+			<action method="addJs"><script>em_layerednavigation/layer.js</script></action>
+			<action method="addJs"><script>em_layerednavigation/treeview.js</script></action>
+			<action method="addJs"><script>em_layerednavigation/slider.js</script></action>
 		</reference>
 		<reference name="before_body_end">
             <block type="layerednavigation/loading" name="layernav.loading" template="em_layerednavigation/loading.phtml"/>
@@ -21,25 +38,22 @@
 	<catalogsearch_result_index>
 		<reference name="head">
             <action method="addCss"><stylesheet>css/em_layerednavigation.css</stylesheet></action>
-			<action method="addItem"><type>skin_js</type><name>em_layerednavigation/jquery.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>em_layerednavigation/jquery.address.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>em_layerednavigation/layer.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>em_layerednavigation/treeview.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>em_layerednavigation/slider.js</name></action>
+			<action method="addJs"><script>em_layerednavigation/jquery.js</script></action>
+			<action method="addJs"><script>em_layerednavigation/jquery.address.js</script></action>
+			<action method="addJs"><script>em_layerednavigation/layer.js</script></action>
+			<action method="addJs"><script>em_layerednavigation/treeview.js</script></action>
+			<action method="addJs"><script>em_layerednavigation/slider.js</script></action>
 		</reference>
 		<reference name="before_body_end">
             <block type="layerednavigation/loading" name="layernav.loading" template="em_layerednavigation/loading.phtml"/>
         </reference>
         <reference name="left">
 			<remove name="catalogsearch.leftnav"/>
-			<block type="layerednavigation/search_layer" name="em.catalog.leftnav" template="em_layerednavigation/view.phtml" before = "-" />
+			<block type="layerednavigation/search_layer" name="em.catalog.leftnav" template="em_layerednavigation/view.phtml" before="-" />
         </reference>
 	</catalogsearch_result_index>
 
 	<layerednavigation_index_view>
-		<reference name="head">
-            <action method="setRobots"><meta>NOINDEX,FOLLOW</meta></action>
-        </reference>
 		<block type="layerednavigation/catalog_layer" name="em.catalog.leftnav" template="em_layerednavigation/view.phtml" />
 		
 		<block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">

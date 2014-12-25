@@ -27,8 +27,8 @@
 <?php if( $this->getCollection() && $this->count()): ?>
 <div class="box-account box-reviews">
     <div class="box-head">
-        <h2><?php echo $this->__('My Recent Reviews') ?></h2>
-        <a class="btn-view-all" href="<?php echo $this->getAllReviewsUrl() ?>"><span><span><?php echo $this->__('View All Reviews') ?></span></span></a>
+        <h2><?php echo $this->__('Đánh giá gần đây của bạn') ?></h2>
+        <a class="btn-view-all" href="<?php echo $this->getAllReviewsUrl() ?>" rel="nofollow"><span><span><?php echo $this->__('Xem tất cả đánh giá') ?></span></span></a>
     </div>
     <ol id="my_recent_reviews">
     <?php $iterator = 0 ?>
@@ -36,10 +36,10 @@
         <li class="item">
             <span class="number"><?php echo ++$iterator ?></span>
             <div class="details">
-                <h3 class="product-name"><a href="<?php echo $this->getReviewUrl($_review->getReviewId()) ?>"><?php echo $this->escapeHtml($_review->getName()) ?></a></h3>
+                <h3 class="product-name"><a href="<?php echo $this->getReviewUrl($_review->getReviewId()) ?>" rel="nofollow"><?php echo $this->escapeHtml($_review->getName()) ?></a></h3>
                 <?php if($_review->getSum()): ?>
                     <div class="ratings">
-                        <strong><?php echo $this->__('Rating:') ?></strong>
+                        <strong><?php echo $this->__('Điểm:') ?></strong>
                         <div class="rating-box">
                             <div class="rating" style="width:<?php echo ( $_review->getSum() / $_review->getCount() ) ?>%;"></div>
                         </div>

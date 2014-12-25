@@ -22,7 +22,7 @@
 <config>
     <modules>
         <Innoexts_StorePricing>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
             <depends>
                 <Innoexts_InnoCore />

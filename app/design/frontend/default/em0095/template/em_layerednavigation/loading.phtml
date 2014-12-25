@@ -7,7 +7,6 @@
 <script type="text/javascript">
 //<![CDATA[
 	em_layer = new EM_LayeredNavigation({
-		current_layout: '<?php echo Mage::app()->getLayout()->getBlock('root')->getTemplate()?>',
 		endpoint: '<?php echo $this->getEndpointUrl() ?>',
 		category: <?php echo Mage::getSingleton('catalog/layer')->getCurrentCategory()->getId(); ?>,
 		ajax: <?php echo $this->isAjaxEnabled() ?>,

@@ -23,7 +23,7 @@ $content = $this->getChildHtml('', true, true);
              <script type="text/javascript">
                 function headerMenu(){
                     var $ = jQuery;
-                    var container = $("#mega-menu");
+                    var container = $(".mega-menu");
                     var isMobile = /iPhone|iPod|iPad|Phone|Mobile|Android|hpwos/i.test(navigator.userAgent);
                     if(!isMobile && !($("body").hasClass("adapt-0")==true)){
                         $("#menuleftText,#menuleftTextHomepage").unbind("click");
@@ -34,33 +34,33 @@ $content = $this->getChildHtml('', true, true);
                             $(".menu-wrapper").hover(
                                 function(){
                                     container.fadeIn(200);
-                                    $("#menuleftText").toggleClass('hidden-arrow');
-                                    $("#menuleftText").attr('title', 'hide-option');
+                                    $(".menuleftText").toggleClass('hidden-arrow');
+                                    $(".menuleftText").attr('title', 'hide-option');
                                 },
                                 function(){
                                     container.fadeOut(100);
-                                    $("#menuleftText").removeClass('hidden-arrow');
-                                    $("#menuleftText").attr('title', 'show-option');
+                                    $(".menuleftText").removeClass('hidden-arrow');
+                                    $(".menuleftText").attr('title', 'show-option');
                                 }
                             );
                         }
                     }else{
-                        $("#mega-menu").css("display","none");
+                        $(".mega-menu").css("display","none");
                         $("#<?php echo $id ?>").unbind('hover');
-                        $("#menuleftText,#menuleftTextHomepage").unbind("click");
-                        $("#menuleftText,#menuleftTextHomepage").removeClass('hidden-arrow');
-                        $("#menuleftText,#menuleftTextHomepage").attr('title', 'show-option');
-                        $("#menuleftText,#menuleftTextHomepage").click(function( event ){
+                        $(".menuleftText,#menuleftTextHomepage").unbind("click");
+                        $(".menuleftText,#menuleftTextHomepage").removeClass('hidden-arrow');
+                        $(".menuleftText,#menuleftTextHomepage").attr('title', 'show-option');
+                        $(".menuleftText,#menuleftTextHomepage").click(function( event ){
                             event.preventDefault();
                             if (container.is( ":visible" )){
                                 container.hide();
-                                $("#menuleftText,#menuleftTextHomepage").removeClass('hidden-arrow');
-                                $("#menuleftText,#menuleftTextHomepage").attr('title', 'show-option');
+                                $(".menuleftText,#menuleftTextHomepage").removeClass('hidden-arrow');
+                                $(".menuleftText,#menuleftTextHomepage").attr('title', 'show-option');
                                 
                             } else {
                                 container.show();
-                                $("#menuleftText,#menuleftTextHomepage").toggleClass('hidden-arrow');
-                                $("#menuleftText,#menuleftTextHomepage").attr('title', 'hide-option');
+                                $(".menuleftText,#menuleftTextHomepage").toggleClass('hidden-arrow');
+                                $(".menuleftText,#menuleftTextHomepage").attr('title', 'hide-option');
                             }
                         });
                     }

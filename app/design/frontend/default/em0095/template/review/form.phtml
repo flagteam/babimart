@@ -26,27 +26,27 @@
 ?>
 <?php $setting = Mage::helper('em0095settings'); ?>
 <div class="form-add">
-    <h2><span><?php echo $this->__('Write Your Own Review') ?></span></h2>
+    <h2><span><?php echo $this->__('Đánh giá & Bình luận') ?></span></h2>
     <?php if ($this->getAllowWriteReviewFlag()): ?>
     <form action="<?php echo $setting->getActionReview() ?>" method="post" id="review-form">
         <fieldset>
             <?php echo $this->getChildHtml('form_fields_before')?>
-            <h3><?php echo $this->__("You're reviewing:"); ?> <span><?php echo $this->escapeHtml($this->getProductInfo()->getName()) ?></span></h3>
+            <h3><?php echo $this->__("Đánh giá:"); ?> <span><?php echo $this->escapeHtml($this->getProductInfo()->getName()) ?></span></h3>
                 <ul class="form-list">
                     <li>
-                        <label for="nickname_field" class="required"><em>*</em><?php echo $this->__('Nickname') ?></label>
+                        <label for="nickname_field" class="required"><em>*</em><?php echo $this->__('Họ tên') ?></label>
                         <div class="input-box">
                             <input type="text" name="nickname" id="nickname_field" class="input-text required-entry" value="<?php echo $this->escapeHtml($data->getNickname()) ?>" />
                         </div>
                     </li>
                     <li>
-                        <label for="summary_field" class="required"><em>*</em><?php echo $this->__('Summary of Your Review') ?></label>
+                        <label for="summary_field" class="required"><em>*</em><?php echo $this->__('Tiêu đề') ?></label>
                         <div class="input-box">
                             <input type="text" name="title" id="summary_field" class="input-text required-entry" value="<?php echo $this->escapeHtml($data->getTitle()) ?>" />
                         </div>
                     </li>
                     <li>
-                        <label for="review_field" class="required"><em>*</em><?php echo $this->__('Review') ?></label>
+                        <label for="review_field" class="required"><em>*</em><?php echo $this->__('Nội dung') ?></label>
                         <div class="input-box">
                             <textarea name="detail" id="review_field" cols="5" rows="3" class="required-entry"><?php echo $this->escapeHtml($data->getDetail()) ?></textarea>
                         </div>
@@ -54,7 +54,7 @@
                 </ul>
                 
             <?php if( $this->getRatings() && $this->getRatings()->getSize()): ?>
-                <h4><?php echo $this->__('How do you rate this product?') ?> <em class="required">*</em></h4>
+                <h4><?php echo $this->__('Cho điểm sản phẩm này') ?> <em class="required">*</em></h4>
                 <span id="input-message-box"></span>
                 <table class="data-table" id="product-review-table">
                     <col />
@@ -89,7 +89,7 @@
             <?php endif; ?>
             </fieldset>
             <div class="buttons-set">
-                <button type="submit" title="<?php echo $this->__('Submit Review') ?>" class="button"><span><span><?php echo $this->__('Submit Review') ?></span></span></button>
+                <button type="submit" title="<?php echo $this->__('Gửi') ?>" class="button"><span><span><?php echo $this->__('Submit Review') ?></span></span></button>
             </div>
     </form>
     <script type="text/javascript">
@@ -97,7 +97,7 @@
         var dataForm = new VarienForm('review-form');
         Validation.addAllThese(
         [
-               ['validate-rating', '<?php echo $this->__('Please select one of each of the ratings above') ?>', function(v) {
+               ['validate-rating', '<?php echo $this->__('Vui lòng cho điểm sản phẩm') ?>', function(v) {
                     var trs = $('product-review-table').select('tr');
                     var inputs;
                     var error = 1;

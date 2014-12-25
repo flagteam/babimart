@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Magento
  *
@@ -32,22 +32,22 @@
  */
 ?>
 <?php if(count($this->getStores())>1): ?>
-    <div class="form-store" id="store-view" style="display:none">
-        <h3><?php echo $this->__('Chọn địa điểm gần bạn nhất');?></h3>
-        <ul>
-            <?php foreach ($this->getStores() as $_lang): ?>
-                <?php
-                $tam	=	$this->escapeHtml($_lang->getName());
-                $ten	=	substr($tam,0,2);
-                ?>
-                <?php $_selected = ($_lang->getId() == $this->getCurrentStoreId()) ? 'selected	' : '' ?>
-                <li class="<?php echo  $_selected ?>">
-                    <a class="btn-store-view" store="<?php echo $_lang->getCode()?>" href="<?php echo $_lang->getCurrentUrl() ?>" ><?php echo $this->escapeHtml($_lang->getName()) ?></a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-        <script type="text/javascript">decorateGeneric($$('.form-language ul li'), ['first','last'])</script>
-    </div>
+<div class="form-store" id="store-view" style="display:none">
+    <h3><?php echo $this->__('Chọn địa điểm gần bạn nhất');?></h3>
+	<ul>
+    <?php foreach ($this->getStores() as $_lang): ?>
+		<?php
+			$tam	=	$this->escapeHtml($_lang->getName());
+			$ten	=	substr($tam,0,2);
+		?>
+        <?php $_selected = ($_lang->getId() == $this->getCurrentStoreId()) ? 'selected	' : '' ?>
+        <li class="<?php echo  $_selected ?>">
+            <a class="btn-store-view" store="<?php echo $_lang->getCode()?>" href="<?php echo $_lang->getCurrentUrl() ?>" ><?php echo $this->escapeHtml($_lang->getName()) ?></a>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+	<script type="text/javascript">decorateGeneric($$('.form-language ul li'), ['first','last'])</script>
+</div>
 <?php endif; ?>
 <script type="text/javascript">
     jQuery(document).ready(function(){
@@ -55,7 +55,8 @@
             jQuery("#store-view").dialog({
                 hide: "puff",
                 closeOnEscape: false,
-                modal: true
+                modal: true,
+		width : "auto"
             });
             jQuery(".ui-dialog-titlebar").css({'border':'none','background':'none'});
             jQuery(".ui-dialog-titlebar .ui-dialog-title").hide();
@@ -73,11 +74,11 @@
                     {
                         $dialog.dialog("close");
                     }
-                    jQuery.cookie("store_view", jQuery("#id_laguage_currency_content #language li.selected a").attr("store"));
+					jQuery.cookie("store_view", jQuery("#id_laguage_currency_content #language li.selected a").attr("store"));
                 });
             });
         }else{
-            jQuery("#store-view").hide();
+          jQuery("#store-view").hide();
         }
     })
 </script>

@@ -4,7 +4,7 @@
     <modules>
         <Cakiem8x_Complexworld>
             <version>0.1.0</version>
-            <active>false</active>
+            <active>true</active>
             <codePool>local</codePool>
         </Cakiem8x_Complexworld>
     </modules>

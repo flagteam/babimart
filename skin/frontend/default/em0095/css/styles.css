@@ -862,7 +862,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .add-to-cart button.button {margin:0 5px 0 0;}
 .product-view .product-shop { margin-left:0!important; overflow:hidden;text-align:left;/* position:relative; z-index:0;*//*social tab will be under slider tab*/}
 .product-view .product-img-box { float:left; display:inline-block;margin-right:20px;}
-.product-view .product-name {padding-right:62px;}
+.product-view .product-name {padding-right:0;}
 
 
 /* Product Options */

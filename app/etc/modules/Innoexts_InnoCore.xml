@@ -22,7 +22,7 @@
 <config>
     <modules>
         <Innoexts_InnoCore>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
         </Innoexts_InnoCore>
     </modules>

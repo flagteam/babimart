@@ -65,8 +65,9 @@ ul ul, ul ol, ol ol, ol ul { font-size:100% }
 .em_nav code,.em_nav em{word-wrap:break-word;-ms-word-wrap:break-word;white-space:normal; }
 .em_nav ul { margin:0; }
 .em_nav li { margin:0; }
-.em_nav .menu-item-depth-0 a { display:block; padding:5px 20px }
-.em_nav .menu-item-vbox .menu-container .menu-item-text{padding-left:10px}
+.em_nav .menu-item-depth-0 a { display:block; padding:7px 15px }
+.em_nav .menu-item-vbox .menu-container .menu-item-text{padding-left:0}
+.em_nav .menu-item-vbox .menu-container .menu-item-text a:hover{color:#0a4b9b}
 .em_nav .menu-item-vbox > .menu-container > .menu-item-text > ul > li > a{padding:5px 0}
 
 /* horizontal menu */
@@ -90,7 +91,7 @@ ul ul, ul ol, ol ol, ol ul { font-size:100% }
 
 /* general */
 .menu-item-parent > a { margin-right:31px;  }
-.em_nav a.arrow { position:absolute; margin-right:0 !important; width:20px; /*text-indent:-99999px;*/ overflow:hidden; top:2px; right:0; padding:5px !important;}
+.em_nav a.arrow { position:absolute; margin-right:0 !important; width:20px; /*text-indent:-99999px;*/ overflow:hidden; top:-3px; right:20px; padding:5px !important;}
 .em_nav a.arrow span { display:block; /* add background arrow here */ text-indent:-999em; }
 
 /* ---------- level 2+ ---------- */
@@ -110,12 +111,12 @@ ul ul, ul ol, ol ol, ol ul { font-size:100% }
 
 .menu-item-hbox > .menu-container { white-space:nowrap }
 .menu-item-hbox > .menu-container > li {/* ;float:none;display:inline-block*/white-space:normal; vertical-align:top;  }
-.menu-item-link > .menu-container { min-width:150px;}
+.menu-item-link > .menu-container { min-width:230px;}
 
 .menu-item-depth-0 .menu-item-link { position:relative }
 .menu-item-depth-0 .menu-item-link > .menu-container { position:absolute; top:0; left:-9999px; z-index:9999 }
 .menu-item-depth-0 .menu-item-link:hover > .menu-container,
-.menu-item-depth-0 .menu-item-link.hover > .menu-container { left:100%; top:-11px }
+.menu-item-depth-0 .menu-item-link.hover > .menu-container { left:90%; top:-11px }
 .nav-right .menu-item-depth-0 .menu-item-link:hover > .menu-container,
 .nav-right .menu-item-depth-0 .menu-item-link.hover > .menu-container,
 .col-right .menu-item-depth-0 .menu-item-link:hover > .menu-container,
@@ -183,3 +184,8 @@ ul ul, ul ol, ol ol, ol ul { font-size:100% }
 .em_nav > ul > .menu-item-depth-0.menu-item-parent:hover > .menu-container { display:block }
 .em_nav > ul > .em-catalog-navigation li.parent > ul { display:none }
 .em_nav > ul > .em-catalog-navigation li.parent:hover > ul { display:block }
+
+/*background-menu*/
+.fix-height {height:380px;max-height:380px;}
+.hg{height:180px}
+.bg-cba {background:url(../../images/bg_menu/do-cho-be-an2.jpg) right center no-repeat;}

@@ -29,16 +29,64 @@
 ?>
 <div class="header-container">
     <div class="header">
-		<div>
-			<div class="logo-theme">
-				<?php if ($this->getIsHomePage()):?>
-				<h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
-				<?php else:?>
-				<a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
-				<?php endif?>
-			</div>
-		</div>
-		<?php echo $this->getChildHtml() ?>
+        <div>
+            <div class="logo-theme">
+                <?php if ($this->getIsHomePage()):?>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+                <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                <?php endif?>
+            </div>
+        </div>
+        <?php echo $this->getChildHtml() ?>
     </div>
 </div>
 <p id="back-top"><a href="#top" title="<?php echo $this->__('Back to Top') ?>"><?php echo $this->__('Back to Top') ?></a></p>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.wrapper_header .container_24 > div:lt(3)').wrapAll('<div class="container_24" id="tophead-fapteam"> </div>');
+        jQuery('#tophead-fapteam').wrapAll('<div class="top-header"></div>');
+        jQuery('.top-header').insertBefore('.wrapper_header');
+        jQuery( "#search_mini_form").clone().prependTo( "#tophead-fapteam" );
+        jQuery( "#emarea04 .menu-wrapper" ).clone().prependTo("#tophead-fapteam" );
+        jQuery( "#tophead-fapteam .menu-wrapper").insertAfter(".language_currency");
+        jQuery( ".header-right").insertAfter(".mobile_support");
+        jQuery("<div class='pull-left navbar-left'> <a class='home' href='/'></a></div>").insertBefore(".language_currency")
+        jQuery( "#tophead-fapteam #search_mini_form").insertAfter("#tophead-fapteam .menu-wrapper");
+       // jQuery( "<div class='box-discount'><a href=''#' target='_blank' class='promo'><span class='img-kml'></span><b class='upc-kml'>Khuyến mại</b></a><a href=''#' target='_blank' class='support-online-link'><i class='icon-supportOnine'></i><i class='icon-around-down'></i>Hỗ trợ trực tuyến</a><a href=''#' target='_blank' class='add'><i class='icon-around-down'></i><b class='upc-kml'>Thêm</b></a></div>").insertAfter(".mobile_support");
+
+        jQuery(document).scroll(function() {
+            var y = jQuery(this).scrollTop();
+            if (y > 500) {
+                jQuery('#tophead-fapteam #search_mini_form').css("display","inline-block");
+                jQuery('#tophead-fapteam .menu-wrapper').css("display","block");
+                jQuery('.mobile_support').css("display","none");
+            } else {
+                jQuery('#tophead-fapteam .menu-wrapper').css("display","none");
+                jQuery('#tophead-fapteam #search_mini_form').css("display","none");
+                jQuery('.mobile_support').css("display","block");
+            }
+        });
+
+
+        jQuery(".nav-header li.nav-sub-item:nth-child(2)").hover(function () {
+            jQuery(this).toggleClass("nav-ac");
+            var t = jQuery(this).find(".box-sub-support"), n = jQuery(this).find(".bg-tem-b");
+            t.toggle(), n.toggle()
+        }), jQuery(".nav-header li.nav-sub-item:last").hover(function () {
+            var n = jQuery(this).find(".box-sub-support-last");
+            n.toggle()
+        })
+
+
+
+    })
+</script>
+<style type="text/css">
+
+</style>
+
+

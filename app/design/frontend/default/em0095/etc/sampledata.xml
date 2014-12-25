@@ -802,16 +802,16 @@
       <instance_type><![CDATA[cmswidget/widget_block]]></instance_type>
       <package_theme><![CDATA[default/em0095]]></package_theme>
     </widget>
-    <widget id="2">
-      <instance_id><![CDATA[2]]></instance_id>
-      <title><![CDATA[EM0095 BabyCare Support - Area02]]></title>
-      <store_ids><![CDATA[a:1:{i:0;i:0;}]]></store_ids>
-      <widget_parameters><![CDATA[a:5:{s:8:"block_id";s:1:"7";s:12:"custom_class";s:16:"support-currency";s:25:"custom_html_wrapper_class";s:0:"";s:22:"custom_html_wrapper_id";s:0:"";s:11:"block_title";s:0:"";}]]></widget_parameters>
-      <sort_order><![CDATA[0]]></sort_order>
-      <page_groups><![CDATA[a:1:{i:0;a:2:{s:10:"page_group";s:9:"all_pages";s:9:"all_pages";a:6:{s:7:"page_id";s:2:"39";s:5:"group";s:9:"all_pages";s:5:"block";s:8:"em_area2";s:9:"for_value";s:3:"all";s:13:"layout_handle";s:7:"default";s:8:"template";s:0:"";}}}]]></page_groups>
-      <instance_type><![CDATA[cmswidget/widget_block]]></instance_type>
-      <package_theme><![CDATA[default/em0095]]></package_theme>
-    </widget>
+      <widget id="2">
+          <instance_id><![CDATA[2]]></instance_id>
+          <title><![CDATA[EM0095 BabyCare Support - Area02]]></title>
+          <store_ids><![CDATA[a:1:{i:0;i:0;}]]></store_ids>
+          <widget_parameters><![CDATA[a:5:{s:8:"block_id";s:1:"7";s:12:"custom_class";s:16:"support-currency";s:25:"custom_html_wrapper_class";s:0:"";s:22:"custom_html_wrapper_id";s:0:"";s:11:"block_title";s:0:"";}]]></widget_parameters>
+          <sort_order><![CDATA[0]]></sort_order>
+          <page_groups><![CDATA[a:1:{i:0;a:2:{s:10:"page_group";s:9:"all_pages";s:9:"all_pages";a:6:{s:7:"page_id";s:2:"39";s:5:"group";s:9:"all_pages";s:5:"block";s:8:"em_area2";s:9:"for_value";s:3:"all";s:13:"layout_handle";s:7:"default";s:8:"template";s:0:"";}}}]]></page_groups>
+          <instance_type><![CDATA[cmswidget/widget_block]]></instance_type>
+          <package_theme><![CDATA[default/em0095]]></package_theme>
+      </widget>
     <widget id="3">
       <instance_id><![CDATA[3]]></instance_id>
       <title><![CDATA[EM0095 BabyCare Free Ship - Area03]]></title>
