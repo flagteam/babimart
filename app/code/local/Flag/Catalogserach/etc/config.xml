@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Flag_Catalogserach>
+            <version>0.1.0</version>
+        </Flag_Catalogserach>
+    </modules>
+    <global>
+        <models>
+            <flag_catalogserach>
+                <class>Flag_Catalogserach_Model</class>
+            </flag_catalogserach>
+            <catalogsearch_resource>
+                <rewrite>
+                    <fulltext>Flag_Catalogserach_Model_Resource_CatalogSearch_Fulltext</fulltext>
+                </rewrite>
+            </catalogsearch_resource>
+        </models>
+        <blocks>
+            <flag_catalogserach>
+                <class>Flag_Catalogserach_Block</class>
+            </flag_catalogserach>
+        </blocks>
+    </global>
+</config>
